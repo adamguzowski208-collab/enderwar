@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Ender WAR</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="particles"></div>
+<div class="overlay"></div>
+
+<nav>
+  <div class="logo">IP: enderwar.fugy.pl</div>
+  <div class="menu">
+    <a href="#" onclick="openLogin()">Dołącz</a>
+    <a href="regulamin.html">Regulamin</a>
+    <a href="discord.html" class="icon">💬 <span>Discord</span></a>
+  </div>
+</nav>
+
+<div class="center">
+  <div class="title">ENDER WAR</div>
+  <button class="btn" onclick="openLogin()">Zostań uczestnikiem</button>
+</div>
+
+<!-- LOGIN -->
+<div class="modal" id="loginModal">
+  <div class="box card">
+    <h2>Dołącz do gry</h2>
+
+    <input class="input" id="user" placeholder="Nick / Login">
+    <div class="skin-preview"><img id="skinImg" src=""></div>
+    <input class="input" id="pass" type="password" placeholder="Hasło">
+
+    <div class="row">
+      <button class="btn" onclick="login()">Zaloguj</button>
+      <button class="btn" onclick="register()">Rejestruj</button>
+    </div>
+
+    <div id="msg" class="small"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
