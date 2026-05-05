@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zgłoszenie</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="particles"></div>
+<div class="overlay"></div>
+
+<nav>
+  <div class="logo">IP: enderwar.fugy.pl</div>
+  <div class="menu">
+    <a href="index.html">Strona główna</a>
+    <a href="regulamin.html">Regulamin</a>
+    <a href="discord.html" class="icon">💬 <span>Discord</span></a>
+  </div>
+</nav>
+
+<div class="page card">
+  <h2>Zostań uczestnikiem</h2>
+
+  <form onsubmit="sendForm(event)">
+    <label class="label">Nick z gry</label>
+    <input class="input" id="nick" required placeholder="Twój nick">
+
+    <div class="skin-preview">
+      <img id="skinImg" src="">
+    </div>
+
+    <label class="label">Link do głowy skina (np. SkinMC)</label>
+    <input class="input" id="skin" required placeholder="https://...">
+
+    <button class="btn submit" type="submit">Wyślij zgłoszenie</button>
+  </form>
+
+  <div id="status" class="small"></div>
+</div>
+
+<script src="app.js"></script>
+<script>
+/* preview z pola nick */
+const nick = document.getElementById("nick");
+const img = document.getElementById("skinImg");
+nick.addEventListener("input", ()=> {
+  const n = nick.value.trim();
+  img.src = n ? "https://mc-heads.net/avatar/" + n : "";
+});
+</script>
+</body>
+</html>
